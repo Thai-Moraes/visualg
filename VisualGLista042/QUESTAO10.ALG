@@ -1,33 +1,36 @@
 Algoritmo "questao10"
-// Escreva um algoritmo pergunte o número total de eleitores de um município, o número de votos brancos, nulos
-// e válidos e apresente como resposta o percentual que cada um representa em relação ao total de eleitores
+// Fazer um algoritmo que pergunte o nome do aluno, e as notas das provas 1 e 2. Deverá ser exibida na tela
+// como resposta a média do aluno, e se ele está aprovado, reprovado ou em prova final. Estas condições
+// devem seguir as regras da tabela abaixo:
 
 Var
-elei_total : inteiro
-votos_br : inteiro
-votos_nulos : inteiro
-votos_valid: inteiro
+nome : caractere
+nota1, nota2, media: real
 
 Inicio
-escreva("Quantos eleitores existem em seu município?: ")
-leia(elei_total)
+escreva("Qual o nome do aluno?: ")
+leia(nome)
 
-escreva("Número de votos brancos: ")
-leia(votos_br)
+escreva("Digite a nota 1: ")
+leia(nota1)
 
-escreva("Número de votos nulos: ")
-leia(votos_nulos)
+escreva("Digite a nota 2: ")
+leia(nota2)
 
-escreva("Número de votos válidos: ")
-leia(votos_valid)
+media <- ((nota1 + nota2)/2)
 
-escreval("")
+escreval("Aluno(a) ", nome, " está com média", media)
 
-escreval("RELATÓRIO EM PERCENTUAL")
-escreval("Total de Eleitores (geral): ", elei_total)
-escreval("Votos brancos: %", (100 * votos_br)/elei_total)
-escreval("Votos nulos: %", (100 * votos_nulos)/elei_total)
-escreval("Votos válidos: %", (100 * votos_valid)/elei_total)
+se media >= 7 entao
+   escreval("Aluno(a) aprovado(a)!")
+fimse
 
+se ((media >= 3) e (media <= 6.9)) entao
+   escreval("Aluno(a) está de prova final!")
+fimse
+
+se media < 3 entao
+   escreval("Aluno(a) reprovado(a)!")
+fimse
 
 Fimalgoritmo
