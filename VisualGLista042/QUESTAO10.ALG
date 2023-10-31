@@ -25,7 +25,7 @@ se media >= 7 entao
    escreval("Aluno(a) aprovado(a)!")
 fimse
 
-se ((media >= 3) e (media <= 6.9)) entao
+se ((media >= 3) e (media < 7)) entao
    escreval("Aluno(a) está de prova final!")
 fimse
 
