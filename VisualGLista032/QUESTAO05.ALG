@@ -5,8 +5,8 @@ Algoritmo "questao05"
 // do primeiro pelo segundo número.
 
 Var
-num1 : inteiro
-num2 : inteiro
+num1, num2 : inteiro
+divid : real
 
 Inicio
 escreva("Digite o primeiro número: ")
@@ -15,11 +15,13 @@ leia(num1)
 escreva("Digite o segundo número: ")
 leia(num2)
 
+divid <- num1 / num2
+
 escreval("Soma: ", num1 + num2)
 escreval("Subtração (Primeiro - Segundo): ", num1 - num2)
 escreval("Subtração (Segundo - Primeiro): ", num2 - num1)
 escreval("Multiplicação: ", num1 * num2)
-escreval("Divisão: ", num1 / num2)
+escreval("Divisão: ", divid)
 escreval("Resto da divisão: ", num1 % num2)
 
 
