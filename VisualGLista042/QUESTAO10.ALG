@@ -4,33 +4,31 @@ Algoritmo "questao10"
 // devem seguir as regras da tabela abaixo:
 
 Var
-nome : caractere
-nota1, nota2, media: real
+   nome : caractere
+   nota1, nota2, media: real
 
 Inicio
-escreva("Qual o nome do aluno?: ")
-leia(nome)
+   escreva("Qual o nome do aluno?: ")
+   leia(nome)
 
-escreva("Digite a nota 1: ")
-leia(nota1)
+   escreva("Digite a nota 1: ")
+   leia(nota1)
 
-escreva("Digite a nota 2: ")
-leia(nota2)
+   escreva("Digite a nota 2: ")
+   leia(nota2)
 
-media <- ((nota1 + nota2)/2)
+   media <- ((nota1 + nota2)/2)
 
-escreval("Aluno(a) ", nome, " está com média", media)
+   escreval(nome, " está com média", media)
 
-se media >= 7 entao
-   escreval("Aluno(a) aprovado(a)!")
-fimse
-
-se ((media >= 3) e (media < 7)) entao
-   escreval("Aluno(a) está de prova final!")
-fimse
-
-se media < 3 entao
-   escreval("Aluno(a) reprovado(a)!")
-fimse
+   se media >= 7 entao
+      escreval("Aluno(a) aprovado(a)!")
+   senao
+      se ((media >= 3) e (media < 7)) entao
+         escreval("Aluno(a) está de prova final!")
+      senao
+         escreval("Aluno(a) reprovado(a)!")
+      fimse
+   fimse
 
 Fimalgoritmo

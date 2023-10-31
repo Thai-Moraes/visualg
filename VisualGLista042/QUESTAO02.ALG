@@ -11,15 +11,13 @@ escreva("Digite um número: ")
 leia(num)
 
 se num < 1000 entao
-   escreval("Esse número é menor que 1000")
-fimse
-
-se ((num >= 1000) e (num <= 5000)) entao
-   escreval("Esse número está entre 1000 e 5000")
-fimse
-   
-se num > 5000 entao
-   escreval("Esse número está acima de 5000")
-fimse
+      escreval("Esse número é menor que 1000")
+   senao
+      se ((num >= 1000) e (num <= 5000)) entao
+         escreval("Esse número está entre 1000 e 5000")
+      senao
+         escreval("Esse número está acima de 5000")
+      fimse
+   fimse
 
 Fimalgoritmo

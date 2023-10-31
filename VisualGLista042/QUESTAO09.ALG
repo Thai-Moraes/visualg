@@ -3,22 +3,20 @@ Algoritmo "questao09"
 // idade, se é maior de idade, ou se é maior de 65 anos.
 
 Var
-idade: inteiro
+   idade: inteiro
 
 Inicio
-escreva("Quantos anos você tem?: ")
-leia(idade)
+   escreva("Quantos anos você tem?: ")
+   leia(idade)
 
-se idade < 18 entao
-   escreval("Você é menor de idade!")
-fimse
-
-se ((idade > 18) e (idade <= 65)) entao
-   escreval("Você é maior de idade!")
-fimse
-   
-se idade > 65 entao
-   escreval("Você é maior de 65 anos, idoso")
-fimse
+   se idade < 18 entao
+      escreval("Você é menor de idade!")
+   senao
+      se ((idade > 18) e (idade <= 65)) entao
+         escreval("Você é maior de idade!")
+      senao
+         escreval("Você é maior de idade e maior de 65 anos!")
+      fimse
+   fimse
 
 Fimalgoritmo
