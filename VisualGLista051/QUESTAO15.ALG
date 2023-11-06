@@ -1,15 +1,29 @@
-Algoritmo "questao10"
-// Desenvolver um programa que apresente as potências de 3 variando de 0 a 15. Deve ser considerado que
-// qualquer número elevado a zero é 1, e elevado a 1 é ele próprio. A apresentação deve observar a seguinte
+Algoritmo "questao15"
+// Desenvolver um programa que apresente a série de Fibonacci até o décimo quinto termo. A série de Fibonacci é
+// formada pela sequência 1,1,2,3,5,8,13,21,34, ... etc. Ela se caracteriza pela soma de um termo posterior com seu
+// anterior subsequente
 
 Var
+ultimo : inteiro
+penul : inteiro
 cont : inteiro
+termo : inteiro
 
 Inicio
 
+cont <- 3
+ultimo <- 1
+penul <- 1
+
+escreva("Sequência de Fibonacci até o décimo quinto termo: 1, 1,")
+
 enquanto (cont <= 15) faca
-         escreval("3 elevado à", cont, " =", 3^cont)
+         termo <- ultimo + penul
+         penul <- ultimo
+         ultimo <- termo
          cont <- cont + 1
+         
+         escreva(termo, ",")
 fimenquanto
 
 Fimalgoritmo

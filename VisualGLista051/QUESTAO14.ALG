@@ -1,15 +1,21 @@
-Algoritmo "questao10"
-// Desenvolver um programa que apresente as potências de 3 variando de 0 a 15. Deve ser considerado que
-// qualquer número elevado a zero é 1, e elevado a 1 é ele próprio. A apresentação deve observar a seguinte
+Algoritmo "questao14"
+// Desenvolver um programa que calcule o fatorial do número 5, ou seja, 5!. Desta forma, temos que 5! = 5 . 4 . 3 .
+// 2 . 1 ou 5! = 1 . 2 . 3 . 4 . 5, equivalente a 120
 
 Var
 cont : inteiro
+acum : inteiro
 
 Inicio
 
-enquanto (cont <= 15) faca
-         escreval("3 elevado à", cont, " =", 3^cont)
+cont <- 1
+acum <- cont
+
+enquanto (cont <= 5) faca
+         acum <- acum * cont
          cont <- cont + 1
 fimenquanto
+
+escreval("O fatorial de 5 é igual a", acum)
 
 Fimalgoritmo

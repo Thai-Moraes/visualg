@@ -1,4 +1,4 @@
-Algoritmo "questao10"
+Algoritmo "questao12"
 // Desenvolver um programa que peça ao usuário para digitar diversos números reais, e ao final, exibir o maior e o
 // menor número que foram digitados, além da media entre TODOS os números digitados pelo usuário. A inserção
 // de números deve parar quando o usuário digitar o número -1, e este número -1 não deve ser considerado nem
@@ -37,7 +37,7 @@ Inicio
          fimse
       fimse
    fimenquanto
-   
+
 escreval("O maior valor é:", maior)
 escreval("O menor valor é:", menor)
 escreval("A media é igual a:", media / i)

@@ -1,15 +1,24 @@
-Algoritmo "questao10"
-// Desenvolver um programa que apresente as potências de 3 variando de 0 a 15. Deve ser considerado que
-// qualquer número elevado a zero é 1, e elevado a 1 é ele próprio. A apresentação deve observar a seguinte
+Algoritmo "questao13"
+// Desenvolver um programa que imprima a tabuada de 3 a 6
 
 Var
-cont : inteiro
+   cont : inteiro
+   tabuada : inteiro
 
 Inicio
 
-enquanto (cont <= 15) faca
-         escreval("3 elevado à", cont, " =", 3^cont)
-         cont <- cont + 1
-fimenquanto
+   tabuada <- 3
+   cont <- 1
+
+   enquanto (cont <= 10) e (tabuada <= 6) faca
+      escreval(tabuada, " .", cont, " =", cont * tabuada)
+      cont <- cont + 1
+
+      se cont >= 11 entao
+         escreval()
+         tabuada <- tabuada + 1
+         cont <- 1
+      fimse
+   fimenquanto
 
 Fimalgoritmo
