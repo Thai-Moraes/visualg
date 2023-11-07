@@ -11,7 +11,9 @@ cont : inteiro
 Inicio
 cont <- 1
 
-enquanto (cont <= 200) faca
+escreva("Números divisíveis por 4 (1 até 199):")
+
+enquanto (cont < 200) faca
          se (cont % 4 = 0) entao
             escreva(cont)
          fimse

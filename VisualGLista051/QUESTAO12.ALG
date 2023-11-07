@@ -5,11 +5,11 @@ Algoritmo "questao12"
 // como maior, nem como menor, e nem na contagem da media
 
 Var
-   num : inteiro
-   maior : inteiro
-   menor : inteiro
-   media : inteiro
-   i : inteiro
+   num : real
+   maior : real
+   menor : real
+   media : real
+   i : real
 
 Inicio
 
@@ -18,28 +18,29 @@ Inicio
 
    maior <- num
    menor <- num
-   media <- num
-   i <- 1
+   media <- 0
+   i <- 0
 
    enquanto (num <> -1) faca
+      media <- media + num
+      i <- i + 1
+
       escreval("Insira um número (-1 para realizar a operação): ")
       leia(num)
 
-      se (num <> -1) entao
-         media <- media + num
-         i <- i + 1
-      se maior < num entao
-         maior <- num
-      senao
-         se menor > num entao
-            menor <- num
+      se num <> -1 entao
+         se maior < num entao
+            maior <- num
+         senao
+            se menor > num entao
+               menor <- num
             fimse
          fimse
       fimse
    fimenquanto
 
-escreval("O maior valor é:", maior)
-escreval("O menor valor é:", menor)
-escreval("A media é igual a:", media / i)
+   escreval("O maior valor é:", maior)
+   escreval("O menor valor é:", menor)
+   escreval("A media é igual a:", media / i)
 
 Fimalgoritmo
