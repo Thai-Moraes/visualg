@@ -8,21 +8,21 @@ Var
 
 Inicio
 
-      penultimo <- 1
-      ultimo <- 1
-      
-      escreva("1 1")
-      
-      repita
+   cont <- 1
+   penultimo <- 1
+   ultimo <- 1
+
+   repita
+      escreva(penultimo)
       termo <- penultimo + ultimo
 
       penultimo <- ultimo
       ultimo <- termo
-      
+
       cont <- cont + 1
-      
-      escreva(termo)
-      
-      ate (cont > 15)
+
+
+
+   ate (cont > 15)
 
 Fimalgoritmo

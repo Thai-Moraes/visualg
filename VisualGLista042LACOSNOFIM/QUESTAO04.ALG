@@ -5,7 +5,7 @@ Var
 
 
 Inicio
-   cont <- 1
+   cont <- 0
    repita
          se cont % 4 = 0 entao
             escreva(cont)

@@ -6,28 +6,29 @@ Algoritmo "questao09"
 
 
 Var
-   termo, penultimo, ultimo, cont: inteiro
+   termo, ante, post, cont: inteiro
 
 Inicio
 
-      escreva("Primeiro Termo: ")
-      leia(ultimo)
-      
-      escreva("Segundo Termo: ")
-      leia(penultimo)
-      
-      escreva(ultimo, penultimo)
-      
-      repita
-      termo <- penultimo + ultimo
+   cont <- 1
 
-      penultimo <- ultimo
-      ultimo <- termo
-      
+   escreva("Primeiro Termo: ")
+   leia(ante)
+
+   escreva("Segundo Termo: ")
+   leia(post)
+
+   repita
+      escreva(ante)
+      termo <- post + ante
+
+      ante <- post
+      post <- termo
+
       cont <- cont + 1
-      
-      escreva(termo)
-      
-      ate (cont > 15)
+
+
+
+   ate (cont > 15)
 
 Fimalgoritmo
