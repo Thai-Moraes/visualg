@@ -1,40 +1,22 @@
 Algoritmo "questao14"
-// Desenvolver um programa que pergunte nome, nota1 e nota2 de cada um dos 15 alunos de uma turma. E exiba
-// a listagem contendo nome, nota1, nota2, média e apresente “APROVADO” se a média for maior ou igual a 5, e
-// “REPROVADO” se a média for menor que 5. Ao final, exibir também a média da turma.
-
+// Fazer um algoritmo que pergunte a idade de uma pessoa, e ao final, informe na tela se a pessoa é menor de
+// idade, se é maior de idade, ou se é maior de 65 anos.
 
 Var
-   nome : caractere
-   nota1, nota2, media, media_turm : real
-   i, cont : inteiro
+   idade: inteiro
 
 Inicio
+   escreva("Quantos anos você tem?: ")
+   leia(idade)
 
-   i <- 1
-
-   para cont de 1 ate 15 passo 1 faca
-      escreva("Informe um nome: ")
-      leia(nome)
-
-      escreva("Informe a nota 1: ")
-      leia(nota1)
-
-      escreva("Informe a nota 2: ")
-      leia(nota2)
-
-      media <- nota1 + nota2
-
-      se (media / 2) >= 5 entao
-         escreval("Aprovado!")
+   se idade < 18 entao
+      escreval("Você é menor de idade!")
+   senao
+      se ((idade > 18) e (idade <= 65)) entao
+         escreval("Você é maior de idade!")
       senao
-         escreval("Reprovado!")
+         escreval("Você é maior de idade e maior de 65 anos!")
       fimse
-
-      media_turm <- media_turm + media
-      i <- i + 1
-   fimpara
-   
-   escreval("Media da Turma: ", media_turm)
+   fimse
 
 Fimalgoritmo

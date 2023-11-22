@@ -1,32 +1,34 @@
 Algoritmo "questao15"
-// Desenvolver um programa que pergunte o nome e o salário bruto de 10 pessoas, e exiba nome, valor da alíquota
-// do imposto de renda, e o salário já com o desconto realizado, sabendo-se que:
+// Fazer um algoritmo que pergunte o nome do aluno, e as notas das provas 1 e 2. Deverá ser exibida na tela
+// como resposta a média do aluno, e se ele está aprovado, reprovado ou em prova final. Estas condições
+// devem seguir as regras da tabela abaixo:
 
 Var
    nome : caractere
-   salario_bruto : real
-   cont : inteiro
+   nota1, nota2, media: real
 
 Inicio
+   escreva("Qual o nome do aluno?: ")
+   leia(nome)
 
-   para cont de 1 ate 15 passo 1 faca
-      escreva("Informe um nome: ")
-      leia(nome)
+   escreva("Digite a nota 1: ")
+   leia(nota1)
 
-      escreva("Informe um salário: ")
-      leia(salario_bruto)
+   escreva("Digite a nota 2: ")
+   leia(nota2)
 
+   media <- ((nota1 + nota2)/2)
 
-      se salario_bruto <= 600 entao
-         escreval("R$", salario_bruto)
+   escreval(nome, " está com média", media)
+
+   se media >= 7 entao
+      escreval("Aluno(a) aprovado(a)!")
+   senao
+      se ((media >= 3) e (media < 7)) entao
+         escreval("Aluno(a) está de prova final!")
       senao
-         se  salario_bruto <= 1499.99 entao
-            escreval("R$", salario_bruto - (salario_bruto * 10/100))
-         senao
-            escreval("R$", salario_bruto - (salario_bruto * 15/100))
-         fimse
+         escreval("Aluno(a) reprovado(a)!")
       fimse
-   fimpara
-
+   fimse
 
 Fimalgoritmo

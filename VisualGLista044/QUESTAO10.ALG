@@ -1,20 +1,18 @@
 Algoritmo "questao10"
-// Desenvolver um programa que pergunte um número inteiro e exiba os números que são, ao mesmo tempo,
-// múltiplos de 3 e 5, na sequência de 1 até o número informado pelo usuário
+//  Fazer um algoritmo que pergunte o nome de um estado brasileiro, e ao final, informe na tela se o estado
+// inserido está ou não na região Sudeste.
 
 Var
-   cont, acum,n : inteiro
-
+   sigla : caractere
 
 Inicio
+   escreva("Digite uma sigla de um estado brasileiro: ")
+   leia(sigla)
 
-   escreva("Informe um número: ")
-
-   leia(n)
-   para cont de 1 ate n passo 1 faca
-      se (cont % 3 = 0) e (cont % 5 = 0) entao
-         escreva(cont)
-      fimse
-   fimpara
+   se ((sigla = "RJ") ou (sigla = "ES") ou (sigla = "SP") ou (sigla = "MG")) entao
+      escreval("É da Região Sudeste!")
+   senao
+      escreval("Não é da Região Sudeste!")
+   fimse
 
 Fimalgoritmo

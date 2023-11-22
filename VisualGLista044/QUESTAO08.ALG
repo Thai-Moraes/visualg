@@ -1,17 +1,26 @@
 Algoritmo "questao08"
-// Desenvolver um programa que apresente no final a soma dos valores pares existentes na faixa de 3 até 21.
 
 Var
-   cont, acum: inteiro
+   num: inteiro
+
 
 Inicio
+   escreva("Digite um número: ")
+   leia(num)
 
-   para cont de 3 ate 27 passo 1 faca
-      se cont % 2 = 0 entao
-         acum <- acum + cont
+   se num < 1000 entao
+      escreval("Esse número é menor que 1000")
+   senao
+      se ((num >= 1000) e (num <= 5000)) entao
+         escreval("Esse número está entre 1000 e 5000")
+      senao
+         se ((num >= 5000) e (num <= 8000)) entao
+            escreval("Esse número está entre 5000 e 8000")
+         senao
+            escreval("Esse número é acima de 8000")
+         fimse
       fimse
-   fimpara
+   fimse
 
-   escreval("Soma dos valores pares: ", acum)
 
 Fimalgoritmo

@@ -1,23 +1,31 @@
 Algoritmo "questao13"
-//  Sabendo-se que uma Polegada equivale a 2,54 centímetros, desenvolver um programa que exiba uma tabela de
-// conversões de polegadas para centímetros, de 1 polegada até um valor inteiro de polegada inserido pelo
-// usuário.
+// Fazer um algoritmo que pergunte 3 números, e ao final, guarde na variável maior o maior destes 3 números
+// inseridos. O valor da variável maior deverá ser exibido ao final
 
 Var
-   num, cont : inteiro
-   aux : real
+   num1, num2, num3, maior : inteiro
 
 Inicio
+   escreva("Digite o primeiro número: ")
+   leia(num1)
 
-      aux <-  1
-      
-      escreva("Informe um valor: ")
-      leia(num)
-      
-      para cont de 1 ate num passo 1 faca
-           escreval(cont, " polegadas =", aux * 2.54, " centímetros")
-           aux <- aux + 1
-      fimpara
+   escreva("Digite o segundo número: ")
+   leia(num2)
+
+   escreva("Digite o terceiro número: ")
+   leia(num3)
+
+   maior <- num1
+
+   se maior < num2 entao
+      maior <- num2
+   fimse
+
+   se maior < num3 entao
+      maior <- num3
+   fimse
+
+   escreval("O maior número é: ", maior)
 
 
 Fimalgoritmo

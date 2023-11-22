@@ -1,28 +1,23 @@
 Algoritmo "questao11"
-// Desenvolver um programa que triangule uma matriz de ordem 10.
-// Deverá aparecer como resposta algo assim na tela:
+// Fazer um algoritmo que pergunte o ano de nascimento de uma pessoa e o ano atual. Ao final o algoritmo
+// deverá exibir na tela a idade da pessoa. Porém, se o usuário inserir o ano de nascimento com valor maior
+// que o ano atual, o cálculo de idade não deverá ser feito, e então deverá surgir a seguinte mensagem na tela:
+// “Dados inseridos estão incorretos”.
 
 Var
-   cont, aux: inteiro
-
+anoAtual, anoNasc : inteiro
 
 Inicio
 
-   aux <- 1
+escreva("Digite o seu ano de nascimento: ")
+leia(anoNasc)
+escreva("Digite o ano atual: ")
+leia(anoAtual)
 
-   para cont de 1 ate 10 passo 1 faca
-      para aux de 1 ate 10 faca
-         se cont <> 10 entao
-            escreva(cont, " -", aux, " ")
-         senao
-            escreva(cont, " -", aux)
-         fimse
-         aux <- aux + 1
-      fimpara
-      escreval("")
-
-      aux <- 1
-
-   fimpara
+se anoNasc < anoAtual entao
+   escreval("Você possui", anoAtual - anoNasc, " anos de idade!")
+senao
+     escreval("Dados inseridos estão incorretos")
+fimse
 
 Fimalgoritmo
