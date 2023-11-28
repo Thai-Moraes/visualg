@@ -14,7 +14,7 @@ Inicio
       se ((num >= 1000) e (num <= 5000)) entao
          escreval("Esse número está entre 1000 e 5000")
       senao
-         se ((num >= 5000) e (num <= 8000)) entao
+         se ((num > 5000) e (num <= 8000)) entao
             escreval("Esse número está entre 5000 e 8000")
          senao
             escreval("Esse número é acima de 8000")
