@@ -1,30 +1,32 @@
 Algoritmo "questao06"
-// Fazer um algoritmo que pergunte o nome de um vendedor, o seu salário fixo e o total de vendas efetuadas por
-// ele no mês (em dinheiro). Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas,
-// exibir ao final o seu nome, o salário fixo, a comissão e o salário completo (fixo + comissão sobre vendas) no final
-// do mês.
+// Desenvolver um programa que leia um vetor A com 15 elementos inteiros. Construir um vetor B de mesmo tipo,
+// sendo cada um dos elementos do vetor B ordenados de forma decrescente.
 
 Var
-nome : caractere
-salario_fixo : real
-venda_total : real
+   A, B: vetor [1..4] de inteiro
+   cont, aux, i : inteiro
+
 
 Inicio
-escreva("Digite o nome do vendedor: ")
-leia(nome)
+   para cont de 1 ate 4 passo 1 faca
+      escreva("Informe o elemento", cont, ": ")
+      leia(A[cont])
+      aux <- A[cont]
+      i <- cont
+      B[cont] <- A[cont]
 
-escreva("Digite o salario fixo do vendedor: R$ ")
-leia(salario_fixo)
+      para cont de 1 ate 4 passo 1 faca
+         se  B[cont] < aux entao
+            B[i] <- B[cont]
+            B[cont] <- aux
+         fimse
+      fimpara
+   fimpara
 
-escreva("Digite a venda total do vendedor: R$ ")
-leia(venda_total)
 
-escreval("")
-
-escreval("RELATÓRIO DO VENDEDOR")
-escreval("Nome:", nome)
-escreval("Salário Fixo: R$", salario_fixo)
-escreval("Comissão: R$", (venda_total * 15/100))
-escreval("Salário Completo (salário fixo + comissão): R$", salario_fixo + (venda_total * 15/100))
+   escreva("Valores de B: ")
+   para cont de 1 ate 4 passo 1 faca
+      escreva(B[cont])
+   fimpara
 
 Fimalgoritmo

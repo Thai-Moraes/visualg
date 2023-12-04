@@ -1,19 +1,32 @@
 Algoritmo "questao07"
-// A Loja Mamão com Açúcar está vendendo seus produtos em até 10 prestações sem juros. Faça um algoritmo que
-// pergunte um valor de uma compra, o número de prestações escolhidas e apresente como resultado o valor das
-// prestações
+// Desenvolver um programa que armazene nome e nota das PR1 e PR2 de 15 alunos, calcule e armazene a média,
+// armazene também a situação do aluno (AP ou RP). Exibir ao final uma listagem contendo nomes, notas, médias e
+// situação de cada aluno.
+
 
 Var
-valor : real
-prest : inteiro
+   PR1, PR2, medias: vetor [1..15] de real
+   nome, situ : vetor [1..15] de caractere
+   cont : inteiro
+
 
 Inicio
-escreva("Digite o valor do produto: R$")
-leia(valor)
+   para cont de 1 ate 15 passo 1 faca
+      escreva("Informe o nome", cont, ": ")
+      leia(nome)
+      escreva("Informe a PR1", cont, ": ")
+      leia(PR1)
+      escreva("Informe a PR2", cont, ": ")
+      leia(PR2)
 
-escreva("Digite o número de prestações: ")
-leia(prest)
+      medias[cont] <- (PR1[cont] + PR2[cont]) / 2
 
-escreval("O valor do produto, em prestações de", prest, " vezes, é igual a R$", valor / prest)
+      se medias[cont] >= 7.0 entao
+         situ[cont] <- "AP"
+      senao
+         situ[cont] <- "RP"
+      fimse
+
+   fimpara
 
 Fimalgoritmo
