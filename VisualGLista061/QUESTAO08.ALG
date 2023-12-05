@@ -1,17 +1,31 @@
 Algoritmo "questao08"
-// Fazer um algoritmo que receba o preço de custo de um produto e mostre como resposta o valor de venda. Sabese que o preço de custo receberá um acréscimo de acordo com um percentual informado pelo usuário
+// Desenvolver um programa que armazene nome e salário de 20 pessoas,
+// calcule e armazene o novo salário sabendo-se que houve um reajuste de 8%.
+// Exibir uma listagem numerada com nome e novo salário
+
 
 Var
-custo : real
-perc : inteiro
+   salarios, salariosNovos: vetor [1..20] de real
+   nomes : vetor [1..20] de caractere
+   cont : inteiro
+
 
 Inicio
-escreva("Digite o valor do custo do produto: R$")
-leia(custo)
+   para cont de 1 ate 20 passo 1 faca
+      escreva("Informe o nome do", cont, ": ")
+      leia(nomes[cont])
+      escreva("Informe o salário do", cont, ": ")
+      leia(salarios[cont])
 
-escreva("Digite o acréscimo percentual do valor: %")
-leia(perc)
+      salariosNovos[cont] <- salarios[cont] - (salarios[cont] * 8/100)
+   fimpara
 
-escreval("O valor de venda do produto é de R$", custo + (custo * perc/100))
+   escreval("--------------")
+   para cont de 1 ate 20 passo 1 faca
+
+      escreval("Nome: ", nomes[cont])
+      escreval("Salário Novo: ", salarioNovos[cont])
+      escreval("--------------")
+   fimpara
 
 Fimalgoritmo

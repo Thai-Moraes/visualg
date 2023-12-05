@@ -6,18 +6,19 @@ Algoritmo "questao07"
 
 Var
    PR1, PR2, medias: vetor [1..15] de real
-   nome, situ : vetor [1..15] de caractere
+   nomes, situ : vetor [1..15] de caractere
    cont : inteiro
 
 
 Inicio
    para cont de 1 ate 15 passo 1 faca
-      escreva("Informe o nome", cont, ": ")
-      leia(nome)
-      escreva("Informe a PR1", cont, ": ")
-      leia(PR1)
-      escreva("Informe a PR2", cont, ": ")
-      leia(PR2)
+      escreva("Informe o nome do", cont, ": ")
+      leia(nomes[cont])
+      escreva("Informe a PR1 do", cont, ": ")
+      leia(PR1[cont])
+      escreva("Informe a PR2 do", cont, ": ")
+      leia(PR2[cont])
+      escreval()
 
       medias[cont] <- (PR1[cont] + PR2[cont]) / 2
 
@@ -28,5 +29,16 @@ Inicio
       fimse
 
    fimpara
+   
+   escreval("--------------")
+    para cont de 1 ate 15 passo 1 faca
+
+           escreval("Nome: ", nomes[cont])
+           escreval("PR1: ", PR1[cont])
+           escreval("PR2: ", PR2[cont])
+           escreval("Média: ", medias[cont])
+           escreval("Situação: ", situ[cont])
+           escreval("--------------")
+    fimpara
 
 Fimalgoritmo
